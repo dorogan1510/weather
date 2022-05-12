@@ -7,7 +7,18 @@
   \*************************/
 /***/ (() => {
 
-
+var weather = {
+  apiKey: '0a459844d6c6a4198eced6bca14c1ca9',
+  fetchWeather: function fetchWeather() {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=0a459844d6c6a4198eced6bca14c1ca9').then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      return console.log(data);
+    })["catch"](function (error) {
+      return console.error(error);
+    });
+  }
+};
 
 /***/ }),
 
