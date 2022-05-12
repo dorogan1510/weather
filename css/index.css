@@ -102,6 +102,13 @@ body {
   box-shadow: 0px 50px 171px rgba(161, 35, 35, 0.2);
   border-radius: 30px;
 }
+.widget__cityChanger {
+  display: flex;
+  justify-content: space-between;
+}
+.widget__cityChanger__input {
+  width: 50px;
+}
 .widget__temp {
   display: flex;
   align-items: center;
@@ -114,7 +121,7 @@ body {
   background: radial-gradient(50% 50% at 50% 50%, #faeeef 0%, #fff3f4 100%);
   border-radius: 30px;
   z-index: 12;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #343434;
 }
 .widget__img {
@@ -122,7 +129,7 @@ body {
   right: 0;
   width: 400px;
   height: 200px;
-  background: url("https://images.unsplash.com/photo-1469365556835-3da3db4c253b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  background: url('https://images.unsplash.com/photo-1469365556835-3da3db4c253b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60');
   z-index: 3;
   border-radius: 30px;
   background-repeat: no-repeat;
@@ -133,7 +140,7 @@ body {
   font-weight: 600;
   font-size: 1.3em;
 }
-.widget__Temperature {
+.widget__temperature {
   display: flex;
 }
 .widget__gradesTemp {

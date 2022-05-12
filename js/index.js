@@ -9,16 +9,50 @@
 
 var weather = {
   apiKey: '0a459844d6c6a4198eced6bca14c1ca9',
-  fetchWeather: function fetchWeather() {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=0a459844d6c6a4198eced6bca14c1ca9').then(function (response) {
+  fetchWeather: function fetchWeather(city) {
+    var _this = this;
+
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric&appid=' + this.apiKey).then(function (response) {
       return response.json();
     }).then(function (data) {
-      return console.log(data);
+      return _this.displayWeather(data);
     })["catch"](function (error) {
       return console.error(error);
     });
+  },
+  displayWeather: function displayWeather(data) {
+    var name = data.name;
+    var _data$weather$ = data.weather[0],
+        icon = _data$weather$.icon,
+        description = _data$weather$.description;
+    var _data$main = data.main,
+        temp = _data$main.temp,
+        humidity = _data$main.humidity;
+    var speed = data.wind.speed;
+    document.querySelector('.widget__selectedCity').innerText = name;
+    document.querySelector('.widget__gradesTemp').innerText = Math.trunc(temp);
+    document.querySelector('.widget__descriptionWeather').innerText = description;
+    document.querySelector('.widget__speedWeather').innerText = 'Wind speed: ' + speed + ' km/h';
+    document.querySelector('.widget__humidity').innerText = 'Humidity' + humidity + ' %';
+    document.querySelector('.widget__icon').src = 'http://openweathermap.org/img/wn/' + icon + '.png';
+
+    if (description == 'clear sky') {
+      document.body.style.backgroundImage = "url('../src/img/clear_sky.jpg')";
+    }
+  },
+  search: function search() {
+    this.fetchWeather(document.querySelector('.widget__cityChanger__input').value);
   }
 };
+document.querySelector('.widget__cityChanger__btn').addEventListener('click', function () {
+  weather.search();
+});
+document.querySelector('.widget__cityChanger__input').addEventListener('keyup', function (event) {
+  if (event.key == 'Enter') {
+    weather.search();
+  }
+});
+weather.fetchWeather('volgograd');
 
 /***/ }),
 
