@@ -35,36 +35,7 @@ var weather = {
     document.querySelector('.widget__speedWeather').innerText = 'Wind ' + Math.trunc(speed) + ' km/h';
     document.querySelector('.widget__humidity').innerText = 'Humidity ' + humidity + ' %';
     document.querySelector('.widget__icon').src = 'http://openweathermap.org/img/wn/' + icon + '@2x.png';
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"; // document.querySelector('.widget__img').style.backgroundImage =
-    //   "url('https://source.unsplash.com/1280x720/?" + name + "')"
-    // if (description == 'clear sky') {
-    //   document.querySelector('.widget__img').style.backgroundImage =
-    //     "url('./src/img/clear_sky.webp')"
-    // }
-    // if ((description == 'few clouds') | 'scattered clouds') {
-    //   document.querySelector('.widget__img').style.backgroundImage =
-    //     "url('./src/img/clouds.gif')"
-    // }
-    // if (description == 'broken clouds') {
-    //   document.querySelector('.widget__img').style.backgroundImage =
-    //     "url('./src/img/broken_clouds.gif')"
-    // }
-    // if ((description == 'shower rain') | 'rain' | 'heavy intensity rain') {
-    //   document.querySelector('.widget__img').style.backgroundImage =
-    //     "url('./src/img/rain.gif')"
-    // }
-    // if (description == 'thunderstorm') {
-    //   document.querySelector('.widget__img').style.backgroundImage =
-    //     "url('./src/img/thunderstorm.gif')"
-    // }
-    // if (description == 'snow') {
-    //   document.querySelector('.widget__img').style.backgroundImage =
-    //     "url('./src/img/snow.gif')"
-    // }
-    // if (description == 'mist') {
-    //   document.querySelector('.widget__img').style.backgroundImage =
-    //     "url('./src/img/mist.gif')"
-    // }
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')";
   },
   search: function search() {
     this.fetchWeather(document.querySelector('.widget__cityChanger__input').value);

@@ -1,67 +1,67 @@
 /*Reset*/
 * {
-  padding: 0;
-  margin: 0;
-  border: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 :focus,
 :active {
-  outline: none;
+    outline: none;
 }
 a:focus,
 a:active {
-  outline: none;
+    outline: none;
 }
 
 nav,
 footer,
 header,
 aside {
-  display: block;
+    display: block;
 }
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
 }
 
 input,
 button,
 textarea {
-  font-family: inherit;
+    font-family: inherit;
 }
 
 input::-ms-clear {
-  display: none;
+    display: none;
 }
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
+    padding: 0;
+    border: 0;
 }
 a,
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 ul li {
-  list-style: none;
+    list-style: none;
 }
 img {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 h1,
@@ -70,133 +70,133 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+    font-size: inherit;
+    font-weight: 400;
 }
 /*--------------------*/
 
 // Start
 body {
-  font-family: Poppins;
+    font-family: Poppins;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
 
-  background-size: cover;
+    background-size: cover;
 }
 $mb: 20px;
 
 .widget {
-  position: relative;
-  width: 350px;
-  height: 340px;
-  box-shadow: 0px 50px 171px rgba(161, 35, 35, 0.2);
-  border-radius: 30px;
-  color: white;
-
-  &__temp {
-    flex-flow: column;
-    flex: block;
+    position: relative;
     width: 350px;
     height: 340px;
-    left: 0;
-
-    background: rgba(49, 49, 49, 0.4);
-    backdrop-filter: blur(6px);
-
+    box-shadow: 0px 50px 171px rgba(161, 35, 35, 0.2);
     border-radius: 30px;
-    z-index: 12;
-    font-family: inherit;
-    font-weight: 300;
-    color: #ffffff;
-  }
+    color: white;
 
-  &__cityChanger {
-    padding-top: 24px;
-    margin-bottom: $mb;
-    display: flex;
-    justify-content: center;
+    &__temp {
+        flex-flow: column;
+        flex: block;
+        width: 350px;
+        height: 340px;
+        left: 0;
 
-    &__input {
-      width: 220px;
-      padding: 4px 4px 4px 10px;
-      border: none;
-      border-radius: 10px;
-      background-color: rgba(171 171 171 / 40%);
-      color: white;
+        background: rgba(49, 49, 49, 0.4);
+        backdrop-filter: blur(6px);
 
-      &::placeholder {
-        color: rgba(255, 255, 255, 0.8);
-      }
+        border-radius: 30px;
+        z-index: 12;
+        font-family: inherit;
+        font-weight: 300;
+        color: #ffffff;
     }
 
-    &__btn {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      margin-left: 10px;
-      background-color: rgba(171 171 171 / 40%);
-      color: white;
+    &__cityChanger {
+        padding-top: 24px;
+        margin-bottom: $mb;
+        display: flex;
+        justify-content: center;
+
+        &__input {
+            width: 220px;
+            padding: 4px 4px 4px 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(171 171 171 / 40%);
+            color: white;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        &__btn {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            margin-left: 10px;
+            background-color: rgba(171 171 171 / 40%);
+            color: white;
+        }
     }
-  }
 
-  &__header {
-    width: 350px;
-    height: 70px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    &__header {
+        width: 350px;
+        height: 70px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-  &__img {
-    position: absolute;
-    right: 90px;
-    top: 50px;
-    width: 100px;
-    height: 100px;
-    z-index: 3;
-    border-radius: 30px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-  }
+    &__img {
+        position: absolute;
+        right: 90px;
+        top: 50px;
+        width: 100px;
+        height: 100px;
+        z-index: 3;
+        border-radius: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
 
-  &__selectedCity {
-    font-weight: 300;
-    font-size: 1.3em;
-  }
+    &__selectedCity {
+        font-weight: 300;
+        font-size: 1.3em;
+    }
 
-  &__temperature {
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: center;
-  }
+    &__temperature {
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+    }
 
-  &__gradesTemp {
-    font-size: 6.5em;
-    font-weight: 300;
-  }
+    &__gradesTemp {
+        font-size: 6.5em;
+        font-weight: 300;
+    }
 
-  &__unitTemp {
-    font-size: 1.7em;
-    padding-top: 20px;
-  }
+    &__unitTemp {
+        font-size: 1.7em;
+        padding-top: 20px;
+    }
 
-  &__descriptionWeather {
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 1.1em;
-  }
+    &__descriptionWeather {
+        margin-bottom: 30px;
+        text-align: center;
+        font-size: 1.1em;
+    }
 
-  &__indicators {
-    width: 350px;
+    &__indicators {
+        width: 350px;
 
-    display: flex;
-    justify-content: space-around;
-  }
+        display: flex;
+        justify-content: space-around;
+    }
 }
